@@ -1,0 +1,9 @@
+{
+  "name": "codex-opinion",
+  "version": "1.0.0",
+  "description": "Get a genuinely independent second opinion from Codex (OpenAI's CLI agent) on work Claude just produced. Blind-frames the artifacts so Codex judges on merits instead of agreeing with a confident summary.",
+  "author": {
+    "name": "Dawson Botsford",
+    "url": "https://github.com/dawsbot"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "dawsbot-plugins",
+  "owner": {
+    "name": "Dawson Botsford",
+    "url": "https://github.com/dawsbot"
+  },
+  "plugins": [
+    {
+      "name": "codex-opinion",
+      "source": "./plugins/codex-opinion",
+      "description": "Get a genuinely independent second opinion from Codex (OpenAI's CLI agent) on work Claude just produced. Blind-frames the artifacts so Codex judges on merits instead of agreeing with a confident summary."
+    }
+  ]
+}
