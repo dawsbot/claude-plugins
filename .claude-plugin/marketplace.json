@@ -1,5 +1,6 @@
 {
   "name": "dawsbot-plugins",
+  "description": "Claude Code plugins by @dawsbot: cross-model review tooling, starting with codex-opinion.",
   "owner": {
     "name": "Dawson Botsford",
     "url": "https://github.com/dawsbot"

@@ -10,12 +10,12 @@ The first version of this skill led the witness. It presented Claude's work as t
 
 Ask for it by name inside Claude Code:
 
-- `/codex-opinion`
+- `/codex-opinion:codex-opinion` (plugin skills are namespaced by plugin name)
 - "get a codex opinion"
 - "what does codex think"
 - "have codex grade this"
 
-It never runs proactively. An unrequested Codex call spends your money without asking.
+The skill's first instruction forbids running unrequested. An unrequested Codex call spends your money without asking, so Claude is told to suggest it in one sentence instead and let you decide.
 
 ## Prerequisites
 

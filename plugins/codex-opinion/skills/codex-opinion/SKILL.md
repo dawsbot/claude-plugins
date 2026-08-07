@@ -65,11 +65,17 @@ substantive unit of work: the current branch's diff against its merge-base, or
 the specific files just written.
 
 ```bash
-git merge-base HEAD origin/main
-git diff $(git merge-base HEAD origin/main)...HEAD
+DEFAULT_BRANCH=$(git symbolic-ref --short refs/remotes/origin/HEAD 2>/dev/null || echo origin/main)
+git diff $(git merge-base HEAD "$DEFAULT_BRANCH")...HEAD
+git diff HEAD                              # uncommitted work is part of the proposal
+git status --porcelain                     # untracked files may be too
 ```
 
-Prefer real artifacts over prose. If the work is not in git, pass the files.
+The merge-base diff alone misses staged, unstaged, and untracked changes. If
+the work just produced is not yet committed, include the working-tree diff and
+the relevant untracked files, or the packet reviews an empty or obsolete
+proposal. Prefer real artifacts over prose. If the work is not in git at all,
+pass the files.
 
 ### 2. Assemble the packet
 
@@ -118,7 +124,7 @@ Read-only sandbox. It is reviewing, not editing.
 
 ```bash
 codex exec --sandbox read-only --skip-git-repo-check \
-  -C "$REPO_ROOT" - < "$PROMPT_FILE" 2>&1 | tee "$OUT_FILE"
+  -C "$(git rev-parse --show-toplevel)" - < "$PROMPT_FILE" 2>&1 | tee "$OUT_FILE"
 ```
 
 Notes:
