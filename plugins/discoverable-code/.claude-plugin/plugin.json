@@ -1,0 +1,9 @@
+{
+  "name": "discoverable-code",
+  "version": "1.0.0",
+  "description": "Code style rules for a codebase that coding agents can actually navigate. Agents retrieve code by grep, not by semantic analysis, so names and paths are addresses — this skill covers the three-word naming threshold, branded ID types, comments at definitions, and conventions files.",
+  "author": {
+    "name": "Dawson Botsford",
+    "url": "https://github.com/dawsbot"
+  }
+}
