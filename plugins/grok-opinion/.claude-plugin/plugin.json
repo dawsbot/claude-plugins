@@ -1,0 +1,9 @@
+{
+  "name": "grok-opinion",
+  "version": "1.0.0",
+  "description": "Get a genuinely independent second opinion from Grok (xAI's CLI agent) on work Claude just produced. Blind-frames the artifacts so Grok judges on merits instead of agreeing with a confident summary.",
+  "author": {
+    "name": "Dawson Botsford",
+    "url": "https://github.com/dawsbot"
+  }
+}

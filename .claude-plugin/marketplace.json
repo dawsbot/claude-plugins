@@ -12,9 +12,14 @@
       "description": "Get a genuinely independent second opinion from Codex (OpenAI's CLI agent) on work Claude just produced. Blind-frames the artifacts so Codex judges on merits instead of agreeing with a confident summary."
     },
     {
+      "name": "grok-opinion",
+      "source": "./plugins/grok-opinion",
+      "description": "Get a genuinely independent second opinion from Grok (xAI's CLI agent) on work Claude just produced. Blind-frames the artifacts so Grok judges on merits instead of agreeing with a confident summary."
+    },
+    {
       "name": "discoverable-code",
       "source": "./plugins/discoverable-code",
-      "description": "Code style rules for a codebase that coding agents can actually navigate. Agents retrieve code by grep, not by semantic analysis, so names and paths are addresses — this skill covers the three-word naming threshold, branded ID types, comments at definitions, and conventions files."
+      "description": "Code style rules for a codebase that coding agents can actually navigate. Agents retrieve code by grep, not by semantic analysis, so names and paths are addresses \u2014 this skill covers the three-word naming threshold, branded ID types, comments at definitions, and conventions files."
     }
   ]
 }
