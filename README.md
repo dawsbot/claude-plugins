@@ -28,6 +28,12 @@ Trigger it by name: `/codex-opinion:codex-opinion` (plugin skills are namespaced
 
 **Prerequisite:** the [Codex CLI](https://github.com/openai/codex) must be installed and authenticated (`codex login status`). Codex usage is billed to your own OpenAI account. If Codex is missing, the skill reports that and stops rather than faking a second opinion.
 
+### grok-opinion
+
+The same idea, pointed at Grok (xAI's CLI agent). Two reviewers with different training disagree in useful ways, and the skill keeps each blind to the other's findings so neither anchors. Trigger it with `/grok-opinion:grok-opinion` or "get a grok opinion".
+
+**Prerequisite:** the [Grok CLI](https://x.ai/cli) must be installed and signed in (`grok models` succeeds). Grok usage is billed to your own xAI account. It runs headless with a read-only tool allowlist and never edits.
+
 ### discoverable-code
 
 Coding agents retrieve code with grep, not language servers or dependency graphs, which makes every symbol name and file path an address. `create()` returns 1,585 hits; `createStripeClient()` returns 43. This skill turns that into working rules: two-to-three-word export names, one spelling per concept, branded ID types so an argument swap becomes a build error, comments on definitions where grep lands, and test files named after their source. It ships a review checklist for auditing a diff.
